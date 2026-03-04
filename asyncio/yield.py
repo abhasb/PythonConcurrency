@@ -30,7 +30,7 @@ If we invoke next() a second time we will receive a StopIteration exception.
 The second string will be passed in as the value to StopIteration exception. 
 **
 
-
+Yield allows a function to return a value and let the state of the function suspend till next() is invoked on the associated generator object.
 
 
 """

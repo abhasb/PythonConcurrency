@@ -15,6 +15,19 @@ Thereby, confirming that a generator function returns a generator object which i
 * Generators when suspended retain the code location, which is the last yield statement executed, and their entire local scope. This allows them to resume execution from where they left off.
 * Generator objects are nothing more than iterators.
 * Remember to make a distinction between a generator function and the associated generator object which are often used interchangeably. A generator function when invoked returns a generator object and next() is invoked on the generator object to run the code within the generator function.
+
+
+A generator goes through the following states:
+
+GEN_CREATED when a generator object has been returned for the first time from a generator function and iteration hasn't started.
+
+GEN_RUNNING when next has been invoked on the generator object and is being executed by the python interpreter.
+
+GEN_SUSPENDED when a generator is suspended at a yield
+
+GEN_CLOSED when a generator has completed execution or has been closed. We'll learn about closing generators later.
+
+inspect.getgeneratorstate()
 """
 
 def keep_learning_asynchronous():
