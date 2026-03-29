@@ -22,4 +22,9 @@ myTask.join()  # wait for the thread to complete
 
 print("{0} exiting".format(current_thread().name))
         
-    
+""" 
+Important caveats to remember when subclassing the Thread class are:
+    - we can only override the run() method and the constructor of the Thread class.
+    - Thread.__init__() must be invoked if the subclass choses to override the constructor.
+    - Note that the args or kwargs don't get passed to the run method.
+"""
